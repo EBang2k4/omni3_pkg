@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="teleop_omni3" type="teleop_omni3.py" name="teleop_omni3" output="screen"/>
+</launch>
+
