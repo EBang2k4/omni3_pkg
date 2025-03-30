@@ -23,3 +23,10 @@ install(DIRECTORY ${dir}/
 DESTINATION
 ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
+
+catkin_install_python(PROGRAMS
+  scripts/omni_keyboard_control.py
+  scripts/wheel_encoder_reader.py
+  scripts/odom_publisher.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
