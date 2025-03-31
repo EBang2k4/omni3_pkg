@@ -1,9 +1,0 @@
-# MoveIt! Controller connecting FollowJointTrajectory with JointTrajectoryController
-controller_list:
-  - name: robot_arm_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    default: true
-    joints:
-      - arm1_joint
-      - arm2_joint
