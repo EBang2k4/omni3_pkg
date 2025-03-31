@@ -58,6 +58,6 @@ source devel/setup.bash
    ```
    roslaunch moveit_robot_arm_sim full_robot_arm_sim.launch 
    ```
-   ![Robot Omni 3 Bánh](Move_it/.png)
+   ![Robot Omni 3 Bánh](image/Move_it.png)
 ---
 
