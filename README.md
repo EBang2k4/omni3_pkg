@@ -21,6 +21,18 @@ catkin_make
 source devel/setup.bash
 ```
 
+Tiếp theo đảm bảo bạn đã tải đầy đủ thư viện:
+```
+sudo apt install ros-noetic-moveit
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+sudo apt install -y ros-noetic-gazebo-ros-control
+sudo apt install -y ros-noetic-ros-control
+sudo apt install -y ros-noetic-ros-controllers
+sudo apt install -y ros-noetic-position-controllers
+sudo apt install -y ros-noetic-effort-controllers
+sudo apt install -y ros-noetic-joint-state-controller
+```
+
 ##### **Hướng Dẫn Sử Dụng**
 
 1. **Khởi động Gazebo cùng RViz**
