@@ -29,8 +29,8 @@ source devel/setup.bash
    ```
 
    **Hình Ảnh Mô Phỏng**  
-   Robot Omni 3 Bánh:
-   ![](image/Gazebo.png)
+   ![Robot Omni 3 Bánh](image/Gazebo.png)
+   ![Robot Omni 3 Bánh](image/Rviz.png)
 
 3. **Cấp quyền thực thi cho các file điều khiển**
    ```
@@ -53,6 +53,11 @@ source devel/setup.bash
    ```
    rosrun mo_hinh_robot display_encoders.py
    ```
-
+   ![Robot Omni 3 Bánh](image/Encoder.png)
+7. **Motion Planning**
+   ```
+   roslaunch moveit_robot_arm_sim full_robot_arm_sim.launch 
+   ```
+   ![Robot Omni 3 Bánh](Move_it/.png)
 ---
 
