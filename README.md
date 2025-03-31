@@ -27,29 +27,29 @@ source devel/setup.bash
    ```
    roslaunch mo_hinh_robot gazebo.launch
    ```
-   *(Giả định package của bạn có tên là `omni3ros_pkg`. Thay đổi tên nếu cần.)*
 
    **Hình Ảnh Mô Phỏng**  
-   Robot Omni 3 Bánh:  
+   Robot Omni 3 Bánh:
+   ![](image/Gazebo.png)
 
-2. **Cấp quyền thực thi cho các file điều khiển**
+3. **Cấp quyền thực thi cho các file điều khiển**
    ```
    chmod +x keyboard_arm_control.py
    chmod +x omni_keyboard_control.py
    chmod +x display_encoders.py
    ```
 
-3. **Điều khiển bánh xe thông qua bàn phím**
+4. **Điều khiển bánh xe thông qua bàn phím**
    ```
    rosrun mo_hinh_robot omni_keyboard_control.py
    ```
 
-4. **Điều khiển tay máy (robotic arm)**
+5. **Điều khiển tay máy (robotic arm)**
    ```
    rosrun mo_hinh_robot keyboard_arm_control.py
    ```
 
-5. **Hiển thị dữ liệu từ encoder**
+6. **Hiển thị dữ liệu từ encoder**
    ```
    rosrun mo_hinh_robot display_encoders.py
    ```
