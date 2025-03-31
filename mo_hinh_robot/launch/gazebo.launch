@@ -1,0 +1,41 @@
+<launch>
+    <!-- Khởi động Gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find mo_hinh_robot)/worlds/empty.world"/>
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+    <include file="$(find mo_hinh_robot)/launch/display.launch"/>
+    <!-- <node
+        name="tf_footprint_base"
+        pkg="tf"
+        type="static_transform_publisher"
+        args="0 0 0 0 0 0 base_link base_footprint 40" /> -->
+
+    <!-- Load mô tả robot -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find mo_hinh_robot)/urdf/mo_hinh_robot.urdf'" />
+
+    <!-- Spawn robot vào Gazebo -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
+          args="-urdf -model mo_hinh_robot -param robot_description"/>
+
+    <!-- Tải thông số wheels -->
+    <rosparam command="load" file="$(find mo_hinh_robot)/config/controllers.yaml" />
+    <!-- Khởi động bộ điều khiển -->
+    <node
+        name="wheel_controller_spawner"
+        pkg="controller_manager"
+        type="spawner"
+        args="  joint_state_controller 
+                left_wheel_joint_velocity_controller 
+                right_wheel_joint_velocity_controller 
+                front_wheel_joint_velocity_controller 
+                arm_1_joint_controller 
+                arm_2_joint_controller" />
+
+
+</launch>
