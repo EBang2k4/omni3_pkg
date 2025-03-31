@@ -67,7 +67,9 @@ sudo apt install -y ros-noetic-joint-state-controller
    ```
    ![Robot Omni 3 Bánh](image/Encoder.png)
 7. **Motion Planning**
+   Trước khi chạy Motion Planning, hãy đảm bảo bạn đã tắt toàn bộ Gazebo của các phần trên:
    ```
+   source devel/setup.bash
    roslaunch moveit_robot_arm_sim full_robot_arm_sim.launch 
    ```
    ![Robot Omni 3 Bánh](image/Move_it.png)
